@@ -108,7 +108,7 @@ st.metric("Temperature",f"{fmt(cur['temperature_2m'])}° {unit}",f"Feels like {f
 
 col1,col2,col3,col4=st.columns(4)
 col1.metric(":cloudy:Humidity",f"{cur['relative_humidity_2m']}%")
-col2.metric(":wind_blowing_face:Wind Speed",f"{cur['wind_speed_10m']},{wind_direction(cur['wind_direction_10m'])}")
+col2.metric(":wind_blowing_face:Wind Speed",f"{cur['wind_speed_10m']}km/..{wind_direction(cur['wind_direction_10m'])}")
 col3.metric(":droplet: precipitation",f"{cur['precipitation']}mm")
 col4.metric(":sun_with_face:UV Index",f"{cur['uv_index']}")
 st.caption(f"Condition: {desc}")
